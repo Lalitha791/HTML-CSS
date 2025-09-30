@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Visual Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 1500px; /* allows scrolling to see fixed */
+      background-color: #f0f0f0;
+    }
+
+    .wrapper {
+      position: relative; /* reference for absolute */
+      width: 500px;
+      height: 400px;
+      margin: 50px auto;
+      border: 3px dashed black;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      text-align: center;
+      position: static; /* default */
+      margin: 10px;
+    }
+
+    /* Different positions */
+    .static-box {
+      background-color: steelblue;
+    }
+
+    .relative-box {
+      background-color: seagreen;
+      position: relative;
+      top: 30px;
+      left: 30px;
+    }
+
+    .absolute-box {
+      background-color: tomato;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .fixed-box {
+      background-color: orange;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    p {
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>CSS Position Demo: Static, Relative, Absolute, Fixed</h2>
+
+  <div class="wrapper">
+    <div class="box static-box">Static</div>
+    <div class="box relative-box">Relative</div>
+    <div class="box absolute-box">Absolute</div>
+    <div class="box fixed-box">Fixed</div>
+  </div>
+
+  <p>
+    Scroll down to observe the <b>Fixed</b> box staying on screen.<br>
+    <b>Absolute</b> is positioned relative to the wrapper.<br>
+    <b>Relative</b> moves from its normal spot.<br>
+    <b>Static</b> stays in normal flow.
+  </p>
+
+  <div style="height:1000px;"></div>
+
+</body>
+</html>
