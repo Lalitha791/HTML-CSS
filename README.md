@@ -1,2 +1,1 @@
-# HTML-CSS
-HTML and CSS 
+hyper text markup language
